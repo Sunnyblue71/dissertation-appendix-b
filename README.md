@@ -38,7 +38,7 @@ Appendix A contains the consolidated implementation and artifact crosswalk. Appe
 
 ## Recommended citation
 
-Aghamie, S. O. (2026). *Supplemental synthetic benchmark data for a DeepSurv-inspired conditional discrete-time mixture-of-experts survival framework* (Version 1.0) [Data set]. GitHub. INSERT_VERSIONED_RELEASE_URL
+Aghamie, S. O. (2026). *Supplemental synthetic benchmark data for a DeepSurv-inspired conditional discrete-time mixture-of-experts survival framework* (Version 1.0) [Data set]. GitHub. https://github.com/Sunnyblue71/dissertation-appendix-b/releases/tag/v1.0.0
 
 ## Versioning
 
