@@ -1,0 +1,106 @@
+% ======================================================================
+% APPENDIX B
+% Insert this AFTER Appendix A. Do not repeat \appendix if it was already
+% issued before Appendix A.
+% ======================================================================
+
+\chapter{SUPPLEMENTAL SYNTHETIC BENCHMARK DATA ARCHIVE}
+\label{app:supplemental-benchmark-data}
+
+\section{Purpose and Scope}
+
+This appendix documents the machine-readable files supporting the Stage~D synthetic benchmark
+results reported in Chapters~IV and~V. Appendix~A provides the consolidated implementation and
+artifact crosswalk; the present appendix provides the corresponding data-level record. The archive
+is descriptive rather than Monte Carlo inferential and does not provide simulation standard
+errors, confidence intervals, power estimates, or hypothesis-test quantities.
+
+The verified archive contains 96 scenario records within each retained block (M1, M2, and M3),
+288 scenario records across the three blocks, and seven evaluated model labels per scenario.
+Accordingly, the long-form Stage~D file contains 2,016 model-by-scenario rows. M1 entered the
+top three in 1 of its 96 scenario records, corresponding to a top-three frequency of
+\(1/96=0.0104\). M2 and M3 recorded no top-three placements. No model rerun was performed
+to create the archived files.
+
+\section{Versioned Repository Location}
+
+The files are maintained in the versioned GitHub release:
+
+\begin{quote}
+\url{INSERT_VERSIONED_RELEASE_URL}
+\end{quote}
+
+The release tag should be \texttt{dissertation-appendix-b-v1.0}. A fixed release or commit
+permalink is used so that the cited archive remains tied to the exact files reviewed with the
+dissertation.
+
+\section{File Inventory}
+
+\begin{table}[htbp]
+\raggedright
+\caption[Machine-readable files in the supplemental benchmark archive]
+{Machine-Readable Files in the Supplemental Benchmark Archive}
+\label{tab:appendix-b-file-inventory}
+\begin{threeparttable}
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{@{}L{4.4cm}L{1.5cm}Y@{}}
+\toprule
+\textbf{File} & \textbf{Rows} & \textbf{Role} \\
+\midrule
+\texttt{stage\_d\_model\_group\_summary.csv}
+& 21
+& Final model-by-block summary used to verify the reported Stage~D means and standard
+deviations for IBS, \(\mathrm{IBS}_{\mathrm{STD95}}\), pair-sampled concordance, and the
+common-grid weighted negative log score. \\
+
+\texttt{stage\_d\_scenario\_level\_metrics.csv}
+& 2,016
+& Long-form model-by-scenario Stage~D archive containing scenario identifiers, model labels,
+validation and test metrics, time grids, Brier-curve fields, configuration fields, and status
+information. \\
+
+\texttt{stage\_b\_candidate\_metrics\_sanitized.csv.gz}
+& 174,960
+& Compressed development-level candidate/run archive retained for provenance. It is not the
+direct source for the final Chapter~IV tables. Absolute high-performance-computing account
+paths were sanitized; numerical values were retained. \\
+
+\texttt{checksums.sha256}
+& ---
+& SHA-256 hashes used to verify that downloaded files match the version cited in the
+dissertation. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Note}. The two Stage~D files are the primary machine-readable evidence for
+Research Questions~1--4. The Stage~B candidate archive is included as supplementary
+development provenance and should not be interpreted as an additional independent benchmark.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\FloatBarrier
+
+\section{Research-Question Crosswalk}
+
+The model-group summary and scenario-level archive support the research questions as follows.
+Research Question~1 is supported by standardized Integrated Brier Score, pair-sampled
+concordance, and scenario-rank fields. Research Question~2 is supported by the saved evaluation
+time grids and time-dependent Brier-curve fields. Research Question~3 is supported by the
+common-grid weighted negative log score fields. Research Question~4 is supported by the
+scenario-level metric distributions, mean ranks, top-three frequencies, and operating-condition
+identifiers.
+
+The archived files preserve numerical results already reported in the dissertation. They do not
+alter the fitted models, reopen model selection, or introduce a new analysis. Their purpose is to
+permit direct inspection of the recorded Stage~D evidence and to strengthen the traceability from
+the chapter-facing tables and figures to the machine-readable outputs.
+
+\section{Integrity and Data Stewardship}
+
+The release includes SHA-256 checksums so that file integrity can be verified after download.
+Only synthetic benchmark metrics and nonrestricted provenance records are included. Patient-level
+clinical records, credentials, access tokens, and restricted source data are excluded from the public
+repository.
